@@ -120,8 +120,34 @@ Both **Light Mode** and **Dark Mode** are supported with automatic persistent st
 
 ---
 
+## 📜 Managing Your Certifications
+
+All certificate PDFs are stored cleanly in `assets/certificates/`:
+- `assets/certificates/ibm-python-for-data-science.pdf`
+- `assets/certificates/udacity-intro-to-ai-and-gen-ai.pdf`
+
+### How to Add a New Certificate:
+1. Place your PDF file inside `assets/certificates/` (for example, `assets/certificates/my-certificate.pdf`).
+2. In `index.html`, locate the `<!-- Certifications Section -->` section.
+3. Duplicate one of the `<article class="cert-card-item">` blocks or replace the placeholder card.
+4. Set the `href` in the buttons to your relative PDF path:
+   ```html
+   <a href="assets/certificates/my-certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View Certificate</a>
+   <a href="assets/certificates/my-certificate.pdf" download="My-Certificate.pdf" class="btn btn-secondary btn-sm">Download PDF</a>
+   ```
+5. Commit and push:
+   ```powershell
+   git add .
+   git commit -m "feat: add new certificate"
+   git push
+   ```
+   *Vercel will update your live portfolio with the new certificate automatically!*
+
+---
+
 ## ✏️ Customizing Placeholders
 
 - **LinkedIn URL**: Replace `https://www.linkedin.com/` in `index.html` with your direct LinkedIn profile handle (e.g., `https://www.linkedin.com/in/meryem-gliouez`).
 - **Additional Projects**: Update the project cards marked with `Editable Placeholder` in `index.html` with your specific repositories, live demo links, and descriptions.
 - **Skills**: Adjust the `suggested` skill tags in the Skills section to reflect your exact course modules and comfort level.
+
